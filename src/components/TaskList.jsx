@@ -3,11 +3,16 @@ import TaskInput from './TaskInput'
 import { useState } from 'react'
 import TaskItem from './TaskItem'
 
+
 const TaskList = () => {
 
     const [tareas, setTareas] = useState([])
 
     const guardarTarea = (nuevaTarea) => {
+        if (nuevaTarea === "") {
+            alert("No se puede agregar una tarea vacía")
+            return
+        }                       
         setTareas([...tareas, nuevaTarea])
     }
     console.log(tareas)//probar si se guarda la tarea
@@ -18,7 +23,7 @@ const TaskList = () => {
     }
 
   return (
-    <div>
+    <div className='contenedor'>
         <TaskInput guardarTarea={guardarTarea}/>
         <h2>Lista de Tareas</h2>
         <ul>

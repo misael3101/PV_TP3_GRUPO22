@@ -11,10 +11,10 @@ const TaskInput = ({guardarTarea}) => {
 
   
   return (
-    <div>
+    <div className='contenedor-input'>
         <label htmlFor="">Ingresar Tarea</label>
         <input type="text" value={tarea} onChange={(e) => setTarea(e.target.value)} placeholder="Nueva Tarea" />
-        <button onClick={agregarLista}>Agregar</button>
+        <button className='buton-agregar' onClick={agregarLista}>Agregar</button>
     </div>
   )
 }

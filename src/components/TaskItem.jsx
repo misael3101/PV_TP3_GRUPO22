@@ -16,18 +16,14 @@ const TaskItem = (props) => {
     }
   return (
 
-
-  <>
+  <div className='contenedor-listas'>
     <li className={realizado ? 'tachada' : ''}>{props.tarea}</li>
-    <button onClick={Realizado}>Realizado</button>
-    <button onClick={() => {
-        if (realizado) {
-            eliminar();
-         } else {
-             alert("No es posible eliminar una tarea no realizada");
-        }}}>Eliminar
-    </button>
-  </>
+    <div className='botones'>
+        <button className='buton-realizado' onClick={Realizado}>Realizado</button>
+        <button className='buton-eliminar' onClick={eliminar}>x</button>
+    </div>
+    
+  </div>
     
   )
 }
