@@ -12,12 +12,17 @@ const TaskList = () => {
     }
     console.log(tareas)//probar si se guarda la tarea
 
+    const eliminarTarea = (index) => {
+        const tareasActualizadas = tareas.filter((tarea, i) => i !==index);
+        setTareas(tareasActualizadas);
+    }
+
   return (
     <div>
         <TaskInput guardarTarea={guardarTarea}/>
         <h2>Lista de Tareas</h2>
         <ul>
-            {tareas.map((tarea, index) => (<TaskItem key={index} tarea={tarea} />))}
+            {tareas.map((tarea, index) => (<TaskItem index={index} tarea={tarea} eliminarTarea={eliminarTarea}/>))}
         </ul>
     </div>
   )
