@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">Integrantes<br>Torres Edgardo Misael Emir - misael3101</p>
+<p align="left">Integrantes<br>Torres Edgardo Misael Emir - misael3101<br>Tarcaya, Gabriel Maximiliano - MaximilianoT13</p>
 
 ###
 
